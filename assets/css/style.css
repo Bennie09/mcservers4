@@ -1,0 +1,235 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e8f1f8;
+    /* Light blue-gray */
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #2c3e50;
+    /* Dark blue */
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.1);
+}
+
+nav {
+    background: #34495e;
+    /* Medium blue */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.1);
+}
+
+nav a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 6px 12px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #3498db;
+    /* Bright blue */
+    transform: scale(1.05);
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the boxes horizontally */
+}
+
+.news-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.1);
+    text-align: center;
+    /* Center the text */
+    width: 80%;
+    /* Make the boxes take 80% of the container's width */
+    max-width: 600px;
+    /* Set a max width for the boxes */
+    /* Removed border-left property */
+}
+
+.news-item h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.news-item h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+}
+
+.members {
+    background: #bdc3c7;
+    /* Slightly darker grey */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.members h2 {
+    margin-top: 0;
+}
+
+.play-now {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #555;
+    /* Darker grey */
+    margin: 40px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.play-now:hover {
+    color: #333;
+    /* Darker grey on hover */
+    transform: scale(1.1);
+}
+
+.footer {
+    background: #2c3e50;
+    /* Dark blue */
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(52, 152, 219, 0.1);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #3498db;
+    /* Bright blue */
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    /* Smaller padding */
+    margin: 10px 0;
+    font-size: 1em;
+    color: #fff;
+    background-color: #555;
+    /* Darker grey */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #333;
+    /* Darker grey on hover */
+    transform: scale(1.05);
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/font/minecraft.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/font/minecraft.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.server-ip {
+    font-family: 'Minecraft', monospace;
+    color: #FF0000;
+    font-size: 1.2em;
+    text-shadow: 1px 1px #3F3F3F;
+    font-weight: bold;
+}
+
+#server-status {
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+#player-count {
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* Status-specific styles */
+.status-online {
+    color: #27ae60 !important;
+    /* Darker green */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.status-offline {
+    color: #c0392b !important;
+    /* Darker red */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.server-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+    max-width: 300px;
+}
+
+.player-head {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.player-head:hover {
+    transform: scale(1.2);
+}
