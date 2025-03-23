@@ -43,7 +43,7 @@ async function checkServerStatus() {
 }
 
 // Check status every 10 seconds instead of 30
-setInterval(checkServerStatus, 3000);
+setInterval(checkServerStatus, 500);
 
 // Check immediately when page loads
 window.onload = checkServerStatus;
