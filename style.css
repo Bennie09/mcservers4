@@ -26,6 +26,7 @@
     list-style: none;
     font-family: "Winky Sans", sans-serif;
     font-weight: 400;
+    border: none !important;
 }
 
 body::-webkit-scrollbar {
@@ -40,17 +41,16 @@ body {
 
 
 .header {
-    height: 50px;
+    height: 60px;
 }
 
 .header .navbar-top {
     align-items: center;
-    padding: 10px;
-    padding-top: 30px;
-    height: 25px;
+    padding-top: 10px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+
 }
 
 .navbar-top .top-2 h3 {
@@ -67,6 +67,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 0 10px var(--background);
 }
 
 .navbar-bottom .nav-logo {
@@ -285,7 +286,7 @@ body {
 .time .weekdays li span,
 .time .weekends li span {
     color: var(--text-color);
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .uptime-content h5 {
@@ -294,6 +295,62 @@ body {
     margin-top: 20px;
 }
 
+.server-stats {
+    background: var(--background);
+    padding: 10px;
+    height: 100vh;
+}
+
+.server-stats .stats-content {
+    float: right;
+    margin-right: 220px;
+}
+
+.stats-content .stats-txt h2 {
+    color: var(--text-color);
+}
+
+.stats-content .stats h5 {
+    line-height: 30px;
+    align-items: center;
+    display: flex;
+    color: var(--text-color);
+    padding-left: 10px;
+}
+
+.stats h5 #server-status {
+    padding-left: 7px;
+}
+
+.stats h5 .icons {
+    align-items: center;
+}
+
+.stats h5 .icons #cloud {
+    color: #00cd00;
+    padding-left: 7px;
+    font-size: 25px;
+    display: none;
+}
+
+.stats h5 .icons #cloud-off {
+    color: var(--red);
+    padding-left: 7px;
+    font-size: 25px;
+    display: none;
+}
+
+.stats h5 .icons #error {
+    color: var(--red);
+    padding-left: 7px;
+    font-size: 25px;
+    display: none;
+}
+
+.stats h5 #player-count {
+    padding-left: 10px;
+    color: var(--secondary-color);
+}
 
 
 
@@ -314,6 +371,12 @@ body {
 
 
 /* Media Query */
+
+@media (max-width: 502px) {
+    .hero-section {
+        height: max-content;
+    }
+}
 
 @media (max-width: 992px) {
     #offcanvasResponsive {
@@ -424,8 +487,8 @@ body {
         transform-origin: bottom;
     }
 
-    .hero-section {
-        height: max-content;
+    .hero-section .hero-content {
+        padding: 20px;
     }
 
     .hero-section .hero-content .join-btn {
@@ -454,5 +517,15 @@ body {
     .uptime-content h5 {
         margin-left: 10px;
         text-align: center;
+    }
+
+    .server-stats .stats-content {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .server-stats .stats-content h5 {
+        text-wrap: wrap;
     }
 }

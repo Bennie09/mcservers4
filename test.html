@@ -115,17 +115,17 @@
             <div class="time">
                 <ul class="weekdays">
                     <h4>Weekdays</h4>
-                    <li>Monday -> <span>3PM - 10PM (GMT)</span></li>
-                    <li>Tuesday -> <span>3PM - 10PM (GMT)</span></li>
-                    <li>Wednesday -> <span>3PM - 10PM (GMT)</span></li>
-                    <li>Thursday -> <span>3PM - 10PM (GMT)</span></li>
-                    <li>Friday -> <span>3PM - 10PM (GMT)</span></li>
+                    <li>Monday - <span>3PM - 10PM (GMT)</span></li>
+                    <li>Tuesday - <span>3PM - 10PM (GMT)</span></li>
+                    <li>Wednesday - <span>3PM - 10PM (GMT)</span></li>
+                    <li>Thursday - <span>3PM - 10PM (GMT)</span></li>
+                    <li>Friday - <span>3PM - 10PM (GMT)</span></li>
                 </ul>
 
                 <ul class="weekends">
                     <h4>Weekends</h4>
-                    <li>Saturday -> <span>10AM - 10PM (GMT)</span></li>
-                    <li>Sunday -> <span>10AM - 10PM (GMT)</span></li>
+                    <li>Saturday - <span>10AM - 10PM (GMT)</span></li>
+                    <li>Sunday - <span>10AM - 10PM (GMT)</span></li>
                 </ul>
             </div>
             <h5>NOTE - The Server May Not Be Available Everyday ⚠</h5>
@@ -138,8 +138,15 @@
                 <h2>Server Stats <ion-icon name="stats-chart-outline" id="charts"></ion-icon></h2>
             </span>
             <div class="stats">
-                <h5>Status: <span id="server-status">Loading... <ion-icon name="cloud-outline"></ion-icon></span></h5>
-                <h5>Number Of Online Members :- <span id="player-count">Loading...</span></h5>
+                <h5>Status : <span id="server-status">Loading... </span>
+                    <span class="icons">
+                        <ion-icon name="cloud-outline" id="cloud"></ion-icon>
+                        <ion-icon name="cloud-offline-outline" id="cloud-off"></ion-icon>
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                    </span>
+                </h5>
+                <h5>Number Of Online Members : <span id="player-count">Loading...</span></h5>
+                <div id="online-players"></div>
             </div>
         </div>
     </section>
@@ -151,6 +158,8 @@
 
 
     <!-- Javascript -->
+    <script src="assets/javascript/index.js"></script>
+
     <script>
         window.onscroll = function () {
             if (window.scrollY > 0) {
