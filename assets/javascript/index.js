@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Failed to fetch server status:", error);
       statusElement.textContent = "Status Unknown";
       statusElement.style.color = "#e81c1c";
-      playerCountElement.textContent = `Players: 0/0`;
+      playerCountElement.textContent = `Players: 0/67890`;
       onlinePlayersElement.innerHTML = "";
       errorIcon.style.display = "block";
     }

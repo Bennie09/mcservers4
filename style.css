@@ -372,13 +372,12 @@ body {
 
 /* Media Query */
 
-@media (max-width: 502px) {
+@media (max-width: 992px) {
+
     .hero-section {
         height: max-content;
     }
-}
 
-@media (max-width: 992px) {
     #offcanvasResponsive {
         background: var(--base-color);
         width: 300px;
@@ -524,8 +523,11 @@ body {
         text-align: center;
         margin-right: 0;
     }
+}
 
-    .server-stats .stats-content h5 {
-        text-wrap: wrap;
+@media (max-width: 430px) {
+    .stats-content .stats h5 {
+        padding-left: 20px;
     }
+
 }
