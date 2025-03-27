@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         statusElement.textContent = "Offline";
         statusElement.className = "status-offline";
         statusElement.style.color = "#e81c1c";
-        playerCountElement.textContent = `Players: 0/0`;
+        playerCountElement.textContent = `Players: 0/6789`;
         playerCountElement.className = "status-offline";
         onlinePlayersElement.innerHTML = "";
         offlineIcon.style.display = "block";
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Failed to fetch server status:", error);
       statusElement.textContent = "Status Unknown";
       statusElement.style.color = "#e81c1c";
-      playerCountElement.textContent = `Players: 0/67890`;
+      playerCountElement.textContent = `Players: 0/6789`;
       onlinePlayersElement.innerHTML = "";
       errorIcon.style.display = "block";
     }
