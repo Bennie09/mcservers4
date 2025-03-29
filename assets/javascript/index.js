@@ -49,22 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
         playerCountElement.textContent = `Players: ${online}/${max}`;
         playerCountElement.className = "status-online";
 
-        if (data.players?.list) {
-          onlinePlayersElement.innerHTML = "";
-          data.players.list.forEach((player) => {
-            const img = document.createElement("img");
-            img.src = `https://mc-heads.net/avatar/${player}/32`;
-            img.alt = player;
-            img.title = player;
-            img.className = "player-head";
-            onlinePlayersElement.appendChild(img);
-          });
-        }
+        // if (data.players?.list) {
+        //   onlinePlayersElement.innerHTML = "";
+        //   data.players.list.forEach((player) => {
+        //     const img = document.createElement("img");
+        //     img.src = `https://mc-heads.net/avatar/${player}/32`;
+        //     img.alt = player;
+        //     img.title = player;
+        //     img.className = "player-head";
+        //     onlinePlayersElement.appendChild(img);
+        //   });
+        // }
       } else {
         statusElement.textContent = "Offline";
         statusElement.className = "status-offline";
         statusElement.style.color = "#e81c1c";
-        playerCountElement.textContent = `Players: 0/6789`;
+        playerCountElement.textContent = `Players: 0/69420`;
         playerCountElement.className = "status-offline";
         onlinePlayersElement.innerHTML = "";
         offlineIcon.style.display = "block";
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Failed to fetch server status:", error);
       statusElement.textContent = "Status Unknown";
       statusElement.style.color = "#e81c1c";
-      playerCountElement.textContent = `Players: 0/6789`;
+      playerCountElement.textContent = `Players: 0/69420`;
       onlinePlayersElement.innerHTML = "";
       errorIcon.style.display = "block";
     }

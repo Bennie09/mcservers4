@@ -3,9 +3,13 @@
     --background: #f5f7fa !important;
     --text-color: #000 !important;
     --text-color-2: #fff;
+    --text-color-3: #222934;
     --red: #e81c1c;
     --secondary-color: #377de6 !important;
     --shadow-color: #0066ff !important;
+    --shadow-color-2: rgba(0, 0, 0, 0.1);
+    --shadow-color-3: rgba(0, 0, 0, 0.2);
+    --shodow-color-4: rgba(0, 0, 0, 0.29);
 }
 
 .darkmode {
@@ -13,8 +17,12 @@
     --background: #222934 !important;
     --text-color: #fff !important;
     --text-color-2: #fff;
+    --text-color-3: #f5f7fa;
     --secondary-color: #377de6 !important;
     --shadow-color: #0066ff !important;
+    --shadow-color-2: rgba(0, 0, 0, 0.577);
+    --shadow-color-3: rgba(0, 0, 0, 0.553);
+    --shodow-color-4: rgba(0, 0, 0, 0.596);
 }
 
 * {
@@ -236,69 +244,81 @@ body {
 
 .uptime {
     background: var(--background);
-    padding: 10px;
-}
-
-.uptime .uptime-content {
-    padding: 10px;
-}
-
-.uptime-content .uptime-txt {
-    line-height: 37.85px;
-    display: flex;
-}
-
-.uptime-content h2 {
-    margin-left: 50px;
-    color: var(--text-color);
-}
-
-.uptime-content #globe {
-    font-size: 30px;
-    color: var(--text-color);
-    margin-top: 3px;
-    padding-left: 10px;
-}
-
-.uptime-content .time {
-    margin-top: 20px;
-    margin-left: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-/* .time .weekdays,
-.time .weekends {
+    padding: 3rem 1.5rem;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     text-align: center;
-} */
-
-.time .weekdays h4,
-.time .weekends h4 {
-    color: var(--text-color);
 }
 
-.time .weekdays li,
-.time .weekends li {
-    color: var(--text-color);
+.uptime-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.time .weekdays li span,
-.time .weekends li span {
-    color: var(--text-color);
-    padding-left: 10px;
+.uptime-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.uptime-content h5 {
+.uptime-txt h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+#globe {
+    font-size: 30px;
+    color: var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.time ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.time h4 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.time li {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.time li span {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.notice {
+    margin-top: 1.5rem;
+    font-size: 1rem;
     color: var(--red);
-    margin-left: 50px;
-    margin-top: 20px;
+    font-weight: 600;
 }
+
+
 
 .server-stats {
     background: var(--background);
     padding: 10px;
-    height: 100vh;
+    height: 25vh;
 }
 
 .server-stats .stats-content {
@@ -308,6 +328,10 @@ body {
 
 .stats-content .stats-txt h2 {
     color: var(--text-color);
+}
+
+.stats-content .stats-txt h2 #charts {
+    color: var(--secondary-color);
 }
 
 .stats-content .stats h5 {
@@ -353,8 +377,72 @@ body {
 }
 
 
+.newsletter {
+    height: 50vh;
+    padding: 2rem 9%;
+    padding: 6rem 2rem;
+}
 
+.newsletter .letter-content {
+    text-align: center;
+}
 
+.letter-content .letter-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.letter-txt #mail {
+    font-size: 30px;
+    color: var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.letter-txt h2 {
+    color: var(--text-color);
+    display: block;
+    text-wrap: wrap;
+}
+
+.letter-txt h2 span {}
+
+.letter-content p {
+    color: var(--text-color-3);
+}
+
+.letter-content form {
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+}
+
+.letter-content form input {
+    width: 500px;
+    max-width: 500px;
+    padding: 15px;
+    padding-left: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0 8px 16px var(--shadow-color-2)
+}
+
+.letter-content form .sub-btn {
+    padding: 15px;
+    width: 135px;
+    background: #377de6;
+    border: 1px solid #000;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 8px 16px var(--shodow-color-4);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.letter-content form .sub-btn:hover {
+    background: #216fe2;
+    box-shadow: 0 12px 20px var(--shadow-color-3);
+}
 
 
 
@@ -373,6 +461,9 @@ body {
 /* Media Query */
 
 @media (max-width: 992px) {
+    /* * {
+        border: none !important;
+    } */
 
     .hero-section {
         height: max-content;
@@ -494,28 +585,8 @@ body {
         margin-bottom: 10px;
     }
 
-    .uptime-content h2 {
-        margin-left: 70px;
-        color: var(--text-color);
-    }
-
-    .uptime-content #globe {
-        font-size: 30px;
-        color: var(--text-color);
-        margin-top: 0;
-        padding-left: 10px;
-    }
-
-    .uptime-content .time {
-        margin-top: 20px;
-        margin-left: 0;
-        display: flex;
-        gap: 40px;
-    }
-
-    .uptime-content h5 {
-        margin-left: 10px;
-        text-align: center;
+    .server-stats {
+        height: max-content;
     }
 
     .server-stats .stats-content {
@@ -523,7 +594,36 @@ body {
         text-align: center;
         margin-right: 0;
     }
+
+    .time {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+@media (max-width: 580px) {
+    .letter-content form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .letter-content form input {
+        width: 100%;
+        /* It will now take full container width */
+        border-radius: 30px;
+    }
+
+    .letter-content form .sub-btn {
+        border-radius: 30px;
+        text-align: center;
+        padding: 12px;
+        width: 100%;
+        max-width: 130px;
+    }
+}
+
 
 @media (max-width: 430px) {
     .stats-content .stats h5 {
