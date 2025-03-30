@@ -1,9 +1,7 @@
-:root {}
-
 .players {
     height: 100vh;
     padding: 10px;
-    padding-top: 90px;
+    padding-top: 80px;
     margin-bottom: 20px;
 }
 
@@ -21,8 +19,23 @@
     margin-bottom: 50px;
 }
 
+.active-players .active-txt {
+    display: flex;
+    align-items: center;
+}
+
+.active-txt #wifi {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
 .players-content .active-players h3 {
     color: var(--text-color);
+}
+
+.active-players h4 {
+    color: var(--red);
 }
 
 .active-players ul {
@@ -58,7 +71,7 @@
     content: "\f111";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: rgb(1, 228, 1);
+    color: #01e401;
     position: absolute;
     top: -6px;
     left: 28px;

@@ -36,6 +36,12 @@
 </head>
 
 <body class="">
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <img src="assets/img/loader.gif" alt="Loading...">
+    </div>
+
     <header class="header">
         <div class="navbar-top">
             <div class="top-1">
@@ -96,16 +102,11 @@
         <div class="players-content">
             <h2>Players</h2>
             <div class="active-players">
-                <h3>Active Players</h3>
+                <span class="active-txt">
+                    <h3>Active Players</h3><ion-icon name="wifi-outline" id="wifi"></ion-icon>
+                </span>
                 <ul>
-                    <li class="player-item inactive">
-                        <img src="https://mc-heads.net/avatar/maotzedun26" alt="maotzedun26" class="player-head">
-                        Maotzedun26
-                    </li>
-                    <li class="player-item active">
-                        <img src="https://mc-heads.net/avatar/AetherWafer" alt="AetherWafer" class="player-head">
-                        AetherWafer
-                    </li>
+
                 </ul>
             </div>
 
@@ -163,7 +164,9 @@
 
     <!-- Javascript -->
 
+    <script src="assets/javascript/loader.js"></script>
     <script src="assets/javascript/darkmode.js"></script>
+    <script src="assets/javascript/players.js"></script>
     <script src="assets/javascript/scroll-func.js"></script>
 </body>
 

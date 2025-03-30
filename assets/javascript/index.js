@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const offlineIcon = document.getElementById("cloud-off");
     const errorIcon = document.getElementById("error");
 
-    // Verify all required elements are present
     if (
       !statusElement ||
       !playerCountElement ||
@@ -21,15 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // (Optional) Hide all icons to ensure only the correct one shows.
-    // This is extra safety even if your CSS has them set to display: none.
     onlineIcon.style.display = "none";
     offlineIcon.style.display = "none";
     errorIcon.style.display = "none";
 
-    // Create an AbortController to cancel the fetch if it takes too long
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5-second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
 
     try {
       const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`, {
@@ -79,8 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Check status every 10 seconds
   setInterval(checkServerStatus, 10000);
-  // Check immediately when page loads
   checkServerStatus();
 });
