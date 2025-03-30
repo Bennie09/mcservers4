@@ -28,6 +28,7 @@
     font-size: 25px;
     padding-left: 10px;
     padding-bottom: 5px;
+    color: var(--text-color);
 }
 
 .players-content .active-players h3 {
