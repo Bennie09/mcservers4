@@ -216,39 +216,8 @@
 
     <!-- Javascript -->
     <script src="assets/javascript/index.js"></script>
-
-    <script>
-        window.onscroll = function () {
-            if (window.scrollY > 0) {
-                document.querySelector('.navbar-bottom').style.top = '0';
-            } else {
-                document.querySelector('.navbar-bottom').style.top = '';
-            }
-        };
-
-    </script>
-
-    <script defer>
-        let darkmode = localStorage.getItem('darkmode')
-        const themeSwitch = document.getElementById('theme-switch')
-
-        const enableDarkmode = () => {
-            document.body.classList.add('darkmode')
-            localStorage.setItem('darkmode', 'active')
-        }
-
-        const disableDarkmode = () => {
-            document.body.classList.remove('darkmode')
-            localStorage.setItem('darkmode', null)
-        }
-
-        if (darkmode === "active") enableDarkmode()
-
-        themeSwitch.addEventListener("click", () => {
-            darkmode = localStorage.getItem('darkmode')
-            darkmode != "active" ? enableDarkmode() : disableDarkmode()
-        })
-    </script>
+    <script src="assets/javascript/scroll-func.js"></script>
+    <script src="assets/javascript/darkmode.js"></script>
 
 </body>
 
