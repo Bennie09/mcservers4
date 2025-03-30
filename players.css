@@ -55,7 +55,10 @@
 }
 
 .player-item.active::before {
-    content: '🟢';
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: rgb(1, 228, 1);
     position: absolute;
     top: -5px;
     left: 27px;
@@ -70,7 +73,10 @@
 }
 
 .player-item.inactive::before {
-    content: '🔘';
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: grey;
     position: absolute;
     top: -5px;
     left: 27px;
