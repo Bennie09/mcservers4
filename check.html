@@ -7,9 +7,134 @@
     <title>Document</title>
 </head>
 
-<body>
+<style>
+    /* News Section Wrapper */
+    .news-section {
+        background-color: var(--base-color);
+        /* Uses your base color */
+        padding: 40px 20px;
+    }
 
-    <p><strong>Server IP:</strong> <span class="server-ip">quite-calculate.gl.joinmc.link [1.20.1]</span></p>
+    /* Container to center and limit width */
+    .news-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Title of the News Section */
+    .news-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: var(--text-color);
+    }
+
+    /* Individual News Items */
+    .news-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+
+    /* Headline for each news item */
+    .news-headline {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--secondary-color);
+    }
+
+    /* News Text */
+    .news-text {
+        font-size: 1rem;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    /* News Date */
+    .news-date {
+        font-size: 0.85rem;
+        color: #666;
+    }
+
+    .hover-effect-scale {
+        display: inline-block;
+        overflow: hidden;
+        /* Prevents overflow from zoom */
+        border-radius: 10px;
+        /* Rounded corners */
+    }
+
+    .hover-effect-target {
+        width: 100%;
+        /* Ensures responsiveness */
+        transition: transform 0.3s ease-in-out;
+        /* Smooth zoom effect */
+    }
+
+    .hover-effect-scale:hover .hover-effect-target {
+        transform: scale(1.1);
+        /* Zooms in while maintaining layout */
+    }
+
+
+
+    @media (max-width: 576px) {
+        .news-title {
+            font-size: 1.75rem;
+        }
+
+        .news-headline {
+            font-size: 1.3rem;
+        }
+
+        .news-text {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<body>
+    <!-- <p><strong>Server IP:</strong> <span class="server-ip">quite-calculate.gl.joinmc.link [1.20.1]</span></p> -->
+
+
+    <section class="news-section">
+        <div class="news-container">
+            <h2 class="news-title">Latest News</h2>
+
+            <div class="news-item">
+                <!-- Scale (zoom) image on hover -->
+                <div class="hover-effect-scale" style="max-width: 306px;">
+                    <img src="assets/img/16.3.25 [3].png" class="hover-effect-target" alt="Image">
+                </div>
+
+                <h3 class="news-headline">Server Update: New Season Begins</h3>
+                <p class="news-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula erat vel tellus
+                    fermentum, a bibendum dui placerat.
+                </p>
+                <span class="news-date">March 29, 2025</span>
+            </div>
+
+            <div class="news-item">
+                <h3 class="news-headline">Event: Battle for Dominance</h3>
+                <p class="news-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed libero a magna bibendum
+                    sodales sit amet vel nunc.
+                </p>
+                <span class="news-date">March 25, 2025</span>
+            </div>
+
+            <div class="news-item">
+                <h3 class="news-headline">New Features Released</h3>
+                <p class="news-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac justo urna. Pellentesque interdum,
+                    sapien at pulvinar commodo.
+                </p>
+                <span class="news-date">March 20, 2025</span>
+            </div>
+        </div>
+    </section>
 
 
 

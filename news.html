@@ -4,104 +4,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>News - Maotzedun26's Server</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/news.css">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Javascript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Link -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Link -->
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/ffa5fbb4aa.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
-    <header>
-        <h1>News</h1>
+<body class="">
+
+    <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <header class="header">
+        <div class="navbar-top">
+            <div class="top-1">
+            </div>
+            <div class="top-2">
+                <h3>🔥 The New Season Has Arrived 🔥</h3>
+            </div>
+            <div class="top-3">
+            </div>
+        </div>
+        <div class="navbar-bottom">
+
+            <button class="menu-btn btn d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><ion-icon name="menu-outline"
+                    id="bars"></ion-icon></button>
+
+            <div class="nav-logo">
+                <div class="logo">
+                    <img src="assets/img/Grass_Block.png" alt="">
+                </div>
+                <span class="name">
+                    <a href="index.html">Maotzedun26's Server</a>
+                </span>
+            </div>
+
+            <nav class="nav">
+                <div class=" nav-links offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+                    aria-labelledby="offcanvasResponsiveLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Maotzedun26's Server</h5>
+                        <button type="button" class="close-btn" data-bs-dismiss="offcanvas"
+                            data-bs-target="#offcanvasResponsive" aria-label="Close"><ion-icon name="close-outline"
+                                id="close"></ion-icon></button>
+                    </div>
+
+                    <ul class="nav-ul offcanvas-body">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-icon">
+                    <button id="theme-switch">
+                        <ion-icon name="moon-outline" id="moon"></ion-icon>
+                        <ion-icon name="sunny-outline" id="sun"></ion-icon>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="players.html">Players</a>
-        <a href="teams.html">Teams</a>
-        <a href="news.html">News</a>
-    </nav>
-    <div class="container">
-        <div class="content">
-            <h2>News</h2>
-            <p>Here will be the detailed news of the server on what's happening recently.</p>
-        </div>
-        <div class="news-section">
-            <h3>16.3.25 : FIGTRUM's base griefed and merging of MAFIA and KRISBEATER</h3>
-            <p>In a bold move to strengthen their forces against their long-standing rival, FIGTRUM, the MAFIA and
-                KRISBEATER clans merged under the MAFIA banner. This alliance marked the beginning of an all-out war for
-                dominance.
 
-                On the early hours of Day 122, three of MAFIA’s most formidable warriors—Maotzedun26, AetherWafer, and
-                PROMETHEUS_0017—launched a devastating assault on one of FIGTRUM’s key bases. With precision and
-                ruthless efficiency, they stormed the stronghold, looting everything of value before setting the base
-                ablaze. Within hours, 80% of the fortress was reduced to ash, leaving FIGTRUM’s forces scattered and
-                stripped of their most valuable resources.
+    <!-- News Section -->
 
-                The attack was nothing short of catastrophic for FIGTRUM. Humiliated and outmatched, they had no choice
-                but to surrender to MAFIA’s dominance, signing the Treaty of MAFIA-FIGTRUMs—a bitter testament to their
-                crushing defeat.
+    <section class="news">
+        <div class="news-content">
+            <h2>Lastest News</h2>
+            <p class="txt-short">Stay in the loop with the latest server updates, events, and insider news—all in one
+                spot!</p>
 
-                This battle marked a turning point in the war, proving that MAFIA’s reign was far from over.</p>
-            <div class="image-grid">
-                <img src="assets/img/16.3.25 [1].png" alt="Aftermath of the griefed base">
-                <img src="assets/img/16.3.25 [2].png" alt="Aftermath of the griefed base">
-                <img src="assets/img/16.3.25 [3].png" alt="Treaty of MAFIA-FIGTRUMs">
+            <div class="news-info">
+                <div class="info-head">
+                    <div class="info-img">
+                        <img src="assets/img/16.3.25 [3].png" class="img-info-3" alt="Treaty of MAFIA-FIGTRUMs">
+                    </div>
+                    <h6 class="sect">Treaty</h6>
+                    <h4 class="headline">FIGTRUM's base griefed and merging of MAFIA and KRISBEATER</h4>
+                    <p class="date">March 16, 2025</p>
+                </div>
+
+
+                <div class="info">
+                    <p>In a bold move to strengthen their forces against their long-standing rival, FIGTRUM, the MAFIA
+                        and
+                        KRISBEATER clans merged under the MAFIA banner. This alliance marked the beginning of an all-out
+                        war for
+                        dominance.
+
+                        On the early hours of Day 122, three of MAFIA’s most formidable warriors—Maotzedun26,
+                        AetherWafer, and
+                        PROMETHEUS_0017—launched a devastating assault on one of FIGTRUM’s key bases. With precision and
+                        ruthless efficiency, they stormed the stronghold, looting everything of value before setting the
+                        base
+                        ablaze. Within hours, 80% of the fortress was reduced to ash, leaving FIGTRUM’s forces scattered
+                        and
+                        stripped of their most valuable resources.
+
+                        The attack was nothing short of catastrophic for FIGTRUM. Humiliated and outmatched, they had no
+                        choice
+                        but to surrender to MAFIA’s dominance, signing the Treaty of MAFIA-FIGTRUMs—a bitter testament
+                        to their
+                        crushing defeat.
+
+                        This battle marked a turning point in the war, proving that MAFIA’s reign was far from over.</p>
+                    <button class="more-img" data-target="modal-1">More Images</button>
+
+                    <div id="modal-1" class="modal-overlay">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="slideshow">
+                                <button class="prev">&#171;</button>
+                                <div class="slide-container">
+                                    <img src="assets/img/16.3.25 [1].png" class="slide active" alt="Aftermath image 1">
+                                    <img src="assets/img/16.3.25 [2].png" class="slide" alt="Aftermath image 2">
+                                </div>
+                                <button class="next">&#187;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="news-info reverse">
+                <div class="info">
+                    <p>Still seething from past betrayals, PROMETHEUS_0017 swore vengeance—and he wasted no time in
+                        making good
+                        on his promise. Teaming up with AetherWafer, he tracked down Maotzedun26’s hidden stronghold at
+                        coordinates 1549, 100, -700, a location once thought to be impenetrable.
+
+                        The assault was swift and merciless. With a barrage of TNT charges, they reduced the base to
+                        ruins,
+                        obliterating the meticulously crafted storage system and laying waste to the automated farms.
+                        What was
+                        once a thriving operation was now nothing more than smoldering debris, a testament to the price
+                        of
+                        betrayal.
+
+                        This act of destruction sent shockwaves through the battlefield, proving that in this war, no
+                        fortress
+                        was truly safe.</p>
+                    <button class="more-img" data-target="modal-2">More Images</button>
+
+                    <div id="modal-2" class="modal-overlay">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="slideshow">
+                                <button class="prev">&#171;</button>
+                                <div class="slide-container">
+                                    <img src="assets/img/15.3.25 [2].png" class="slide active"
+                                        alt="Base interior destruction">
+                                </div>
+                                <button class="next">&#187;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-head">
+                    <div class="info-img">
+                        <img src="assets/img/15.3.25 [1].png" class="img-info-2" alt="Base exterior damage">
+                    </div>
+                    <h6 class="sect">Betrayal & Vengance</h6>
+                    <h4 class="headline">Maotzedun26's base griefed</h4>
+                    <p class="date">March 15, 2025</p>
+                </div>
+            </div>
+
+
+
+            <div class="news-info">
+                <div class="info-head">
+                    <div class="info-img">
+                        <img src="assets/img/12.3.25.png" class="img-info-1" alt="Assasinasion">
+                    </div>
+                    <h6 class="sect">War & Betrayal</h6>
+                    <h4 class="headline">Assasination plot against PROMETHESUS_0019</h4>
+                    <p class="date">March 14, 2025</p>
+                </div>
+
+
+                <div class="info">
+                    <p>March 14, 2025—The war between the MAFIA Clan and its former allies took a dramatic and deadly
+                        turn. In a
+                        calculated act of vengeance, the notorious MAFIA leader, Maotzedun26, orchestrated the
+                        assassination of
+                        PROMETHEUS_0017 in one of the most cold-blooded betrayals of the conflict.
+
+                        Luring his target to what appeared to be a hidden stronghold, Maotzedun26 had rigged the entire
+                        base
+                        with exactly 36 TNT, strategically placed beneath the floorboards. Unaware of the impending
+                        trap,
+                        PROMETHEUS_0017 followed his former ally inside.
+
+                        With an eerie calm, Maotzedun26 led him to a button discreetly positioned next to a painting
+                        and, in a
+                        chilling moment of deception, uttered the now-infamous words:
+
+                        "Now, let's stare at this painting."
+
+                        Before PROMETHEUS_0017 could react, Maotzedun26 pressed the button. A deafening explosion
+                        erupted as the
+                        TNT ignited in a chain reaction, engulfing the base in fire and debris. Within seconds, the
+                        structure
+                        was obliterated—along with PROMETHEUS_0017.
+
+                        The assassination sent shockwaves through the war-torn battlefield, proving once again that in
+                        the world
+                        of MAFIA, trust is nothing more than a death sentence.</p>
+                </div>
             </div>
         </div>
-        <div class="news-section">
-            <h3>15.3.25 : Maotzedun26's base griefed</h3>
-            <p>Still seething from past betrayals, PROMETHEUS_0017 swore vengeance—and he wasted no time in making good
-                on his promise. Teaming up with AetherWafer, he tracked down Maotzedun26’s hidden stronghold at
-                coordinates 1549, 100, -700, a location once thought to be impenetrable.
+    </section>
 
-                The assault was swift and merciless. With a barrage of TNT charges, they reduced the base to ruins,
-                obliterating the meticulously crafted storage system and laying waste to the automated farms. What was
-                once a thriving operation was now nothing more than smoldering debris, a testament to the price of
-                betrayal.
 
-                This act of destruction sent shockwaves through the battlefield, proving that in this war, no fortress
-                was truly safe.</p>
-            <div>
-                <img src="assets/img/15.3.25 [1].png" alt="Base exterior damage">
-                <img src="assets/img/15.3.25 [2].png" alt="Base interior destruction">
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="icons">
+                <i class="fa-brands fa-discord" id="discord"></i>
+                <i class="fa-brands fa-x-twitter" id="x"></i>
+                <i class="fa-brands fa-instagram" id="instagram"></i>
             </div>
-        </div>
-        <div class="news-section">
-            <h3>14.3.25 : Assasination plot against PROMETHESUS_0019</h3>
-            <p>March 14, 2025—The war between the MAFIA Clan and its former allies took a dramatic and deadly turn. In a
-                calculated act of vengeance, the notorious MAFIA leader, Maotzedun26, orchestrated the assassination of
-                PROMETHEUS_0017 in one of the most cold-blooded betrayals of the conflict.
-
-                Luring his target to what appeared to be a hidden stronghold, Maotzedun26 had rigged the entire base
-                with exactly 36 TNT, strategically placed beneath the floorboards. Unaware of the impending trap,
-                PROMETHEUS_0017 followed his former ally inside.
-
-                With an eerie calm, Maotzedun26 led him to a button discreetly positioned next to a painting and, in a
-                chilling moment of deception, uttered the now-infamous words:
-
-                "Now, let's stare at this painting."
-
-                Before PROMETHEUS_0017 could react, Maotzedun26 pressed the button. A deafening explosion erupted as the
-                TNT ignited in a chain reaction, engulfing the base in fire and debris. Within seconds, the structure
-                was obliterated—along with PROMETHEUS_0017.
-
-                The assassination sent shockwaves through the war-torn battlefield, proving once again that in the world
-                of MAFIA, trust is nothing more than a death sentence.
-
+            <p class="footer-text">
+                &copy; 2025 Maotzedun26's Server. All rights reserved. <br> Designed by Xvoid Technologies.
             </p>
-            <img src="assets/img/12.3.25.png" alt="Assasinasion">
         </div>
-    </div>
-    <div class="footer">
-        <p><strong>Server IP:</strong> <span class="server-ip">quite-calculate.gl.joinmc.link [1.20.1]</span></p>
-        <p><strong>Contact us on Discord:</strong> <a href="example.com">N/A</a></p>
-    </div>
-    <div class="modal" id="imageModal">
-        <img class="modal-content" id="modalImage">
-    </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     <!-- Javascript -->
-    <script src="assets/javascript/news.js"></script>
+    <script src="assets/javascript/loader.js"></script>
+    <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/modal-overlay.js"></script>
+    <script src="assets/javascript/scroll-func.js"></script>
+    <script src="assets/javascript/darkmode.js"></script>
+
 
 </body>
 
