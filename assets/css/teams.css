@@ -1,241 +1,142 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e8f1f8;
-    /* Light blue-gray */
-    color: #2c3e50;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.teams {
+    height: auto-fit;
+    padding: 10px;
+    padding-top: 80px;
+    margin-bottom: 50px;
 }
 
-header {
-    background: #2c3e50;
-    /* Dark blue */
-    color: #ecf0f1;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-    background: #34495e;
-    /* Medium blue */
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: #ecf0f1;
-    margin: 0 10px;
-    /* Reduced margin */
-    text-decoration: none;
-    font-size: 0.9em;
-    /* Smaller font size */
-    padding: 6px 12px;
-    /* Smaller padding */
-    border: 1px solid #3498db;
-    border-radius: 4px;
-    /* Slightly smaller border radius */
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-}
-
-nav a:hover {
-    color: #fff;
-    background-color: #3498db;
-    transform: scale(1.05);
-}
-
-.container {
-    width: 100%;
-    margin: 20px auto;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.teams-content {
     align-items: center;
-    /* Center the boxes horizontally */
+    padding: 10px;
 }
 
-.content {
-    background: rgba(247, 250, 252, 0.9);
-    /* Very light blue */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.1);
+.teams-content h2 {
     text-align: center;
-    /* Center the text */
-    width: 80%;
-    /* Make the boxes take 80% of the container's width */
-    max-width: 600px;
-    /* Set a max width for the boxes */
+    color: var(--text-color);
 }
 
-.content h2 {
-    margin-top: 0;
+.mafia-team {
+    margin-bottom: 50px;
 }
 
-.footer {
-    background: #2c3e50;
-    /* Dark blue */
-    color: #ecf0f1;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 -2px 4px rgba(52, 152, 219, 0.1);
-}
-
-.footer p {
-    margin: 5px 0;
-}
-
-.footer a {
-    color: #3498db;
-    /* Bright blue */
-}
-
-.footer:hover {
-    background: #34495e;
-    /* Medium blue */
-    color: #ecf0f1;
-}
-
-.footer:hover p,
-.footer:hover a {
-    color: #ecf0f1;
-}
-
-.team-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.mafia-team h3 {
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--red);
     align-items: center;
-    gap: 12px;
-}
-
-.team-member {
-    display: inline-flex;
-    align-items: center;
-    margin: 15px 0;
-    padding: 12px 20px;
-    background: #fff;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    font-weight: 600;
-    font-size: 1.1em;
-    box-shadow: 0 3px 6px rgba(52, 152, 219, 0.15);
-    border-left: 4px solid #3498db;
-    width: auto;
-    /* Changed from min-width to auto */
-}
-
-.team-member:hover {
-    transform: translateY(-2px);
-    background: #f8fafc;
-    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.2);
-    border-left-width: 6px;
-}
-
-.player-head {
-    width: 36px;
-    height: 36px;
-    margin-right: 15px;
-    image-rendering: pixelated;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-@font-face {
-    font-family: 'Minecraft';
-    src: url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/font/minecraft.woff2') format('woff2');
-}
-
-.clan-name {
-    font-family: 'Minecraft', monospace;
-    color: #c0392b;
-    /* Dark red for MAFIA */
-    font-size: 2.5em;
-    /* Made even bigger */
-    text-shadow: 2px 2px rgba(44, 62, 80, 0.3);
     display: inline-block;
-    margin: 20px 0;
-    font-weight: bold;
     position: relative;
-    padding-bottom: 15px;
 }
 
-.clan-name::after {
+.mafia-team h3::after {
     content: '';
     position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
     bottom: 0;
     left: 0;
+    background-color: var(--red);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.mafia-team h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.figtrums-team h3 {
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--pink);
+    align-items: center;
+    display: inline-block;
+    position: relative;
+}
+
+.figtrums-team h3::after {
+    content: '';
+    position: absolute;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, #c0392b, #e74c3c);
-    /* Red gradient for MAFIA */
-    border-radius: 2px;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--pink);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
-/* MAFIA team specific styles */
-.clan-name+.team-list .team-member {
-    border-left: 4px solid #c0392b;
-    /* Red border */
+.figtrums-team h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-.clan-name+.team-list .team-member:hover {
-    box-shadow: 0 6px 12px rgba(192, 57, 43, 0.2);
-    /* Red shadow */
-    border-left-width: 6px;
+
+.team-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.3fr);
+    gap: 25px;
 }
 
-/* FIGTRUMS team specific styles */
-.clan-name.sigma {
-    color: #FF69B4;
-    /* Pink */
-    font-size: 2.5em;
-}
-
-.clan-name.sigma::after {
-    background: linear-gradient(to right, #FF69B4, #ff99cc);
-    /* Pink gradient */
-}
-
-.clan-name.sigma+.team-list .team-member {
-    border-left: 4px solid #FF69B4;
-    /* Pink border */
-}
-
-.clan-name.sigma+.team-list .team-member:hover {
-    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.2);
-    /* Pink shadow */
-    border-left-width: 6px;
-}
-
-.server-ip {
-    font-family: 'Minecraft', monospace;
-    color: #FF0000;
-    font-size: 1.2em;
-    text-shadow: 1px 1px #3F3F3F;
-    font-weight: bold;
+.team-list .team-member {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
 }
 
 .team-member.leader {
     position: relative;
+    display: inline-block;
+    overflow: visible;
 }
 
 .team-member.leader::before {
     content: '👑';
     position: absolute;
-    top: -10px;
-    /* Moved slightly closer */
-    left: 45px;
-    font-size: 1em;
-    /* Reduced from 1.2em */
+    top: -17px;
+    left: 22px;
+    font-size: 0.9em;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transform: rotate(15deg);
-    /* Changed from -15deg to 15deg */
+}
+
+.team-member .player-head {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+}
+
+.team-member:hover {
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+/* Media Query */
+
+@media (max-width: 992px) {
+
+    .team-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .team-list {
+        grid-template-columns: 1fr;
+    }
 }
