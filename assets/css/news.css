@@ -79,6 +79,8 @@
 
 hr {
     padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .info-head .sect {
