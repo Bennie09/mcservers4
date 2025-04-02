@@ -82,6 +82,7 @@ hr {
 }
 
 .info-head .sect {
+    cursor: pointer;
     color: #4e5562;
     padding-top: 10px;
     font-size: 14px;
