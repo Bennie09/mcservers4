@@ -822,6 +822,16 @@ body {
 }
 
 @media (max-width: 580px) {
+
+    .join-overlay .ip-info h3 {
+        color: var(--secondary-color);
+        font-size: 18px;
+    }
+
+    .join-overlay .ip-info h3 span {
+        font-size: 18px;
+    }
+
     .letter-content form {
         display: flex;
         flex-direction: column;
