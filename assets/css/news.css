@@ -77,6 +77,10 @@
     transform: scale(1.03);
 }
 
+hr {
+    padding: 10px;
+}
+
 .info-head .sect {
     color: #4e5562;
     padding-top: 10px;
