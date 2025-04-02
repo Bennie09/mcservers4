@@ -113,6 +113,26 @@
                 no cheats or exploit clients. Beyond that, the world is yours to shape.​</p>
 
             <button class="join-btn">Join Now!</button>
+            <div class="join-overlay">
+                <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+                <div class="ip-info">
+                    <h2>Server Information</h2>
+                    <h3>Server IP:
+                        <span>should-tourist.gl.joinmc.link</span>
+                        <span class="copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </span>
+                    </h3>
+                    <h3>Server Version:
+                        <span>
+                            1.20.1
+                        </span>
+                        <span class="copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </span>
+                    </h3>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -159,7 +179,6 @@
                     </span>
                 </h5>
                 <h5 class="h5-count">Number Of Online Members : <span id="player-count">Loading...</span></h5>
-                <div id="online-players"></div>
             </div>
         </div>
     </section>
@@ -197,7 +216,10 @@
         </div>
     </footer>
 
-
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+        </div>
+    </div>
 
 
 
@@ -224,6 +246,7 @@
 
     <!-- Javascript -->
     <script src="assets/javascript/loader.js"></script>
+    <script src="assets/javascript/join-now.js"></script>
     <script src="assets/javascript/index.js"></script>
     <script src="assets/javascript/scroll-func.js"></script>
     <script src="assets/javascript/darkmode.js"></script>

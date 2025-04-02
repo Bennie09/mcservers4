@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   async function checkServerStatus() {
-    const serverIP = "quite-calculate.gl.joinmc.link";
+    const serverIP = "should-tourist.gl.joinmc.link";
     const activePlayersContainer = document.querySelector(".active-players ul");
     const allPlayerItems = document.querySelectorAll(
       ".all-players .player-item"

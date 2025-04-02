@@ -77,9 +77,26 @@
     transform: scale(1.03);
 }
 
-hr {
-    padding: 10px 300px;
+.hr {
+    margin: 10px;
+    text-align: center;
+    /* Ensures the HR aligns properly */
 }
+
+.hr hr {
+    width: 90%;
+    /* Use a percentage instead of a fixed width */
+    max-width: 1100px;
+    /* Prevents it from getting too wide */
+    margin: 0 auto;
+    border: none;
+    /* Optional: Removes default styling */
+    height: 1px;
+    /* Adjust thickness */
+    background-color: #4e5562;
+    /* Ensures visibility */
+}
+
 
 .info-head .sect {
     cursor: pointer;

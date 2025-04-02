@@ -3,156 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Server Status Notification</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<style>
-    /* News Section Wrapper */
-    .news-section {
-        background-color: var(--base-color);
-        /* Uses your base color */
-        padding: 40px 20px;
-    }
-
-    /* Container to center and limit width */
-    .news-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    /* Title of the News Section */
-    .news-title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 30px;
-        color: var(--text-color);
-    }
-
-    /* Individual News Items */
-    .news-item {
-        margin-bottom: 20px;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 20px;
-    }
-
-    /* Headline for each news item */
-    .news-headline {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: var(--secondary-color);
-    }
-
-    /* News Text */
-    .news-text {
-        font-size: 1rem;
-        color: var(--text-color);
-        line-height: 1.6;
-        margin-bottom: 10px;
-    }
-
-    /* News Date */
-    .news-date {
-        font-size: 0.85rem;
-        color: #666;
-    }
-
-    .hover-effect-scale {
-        display: inline-block;
-        overflow: hidden;
-        /* Prevents overflow from zoom */
-        border-radius: 10px;
-        /* Rounded corners */
-    }
-
-    .hover-effect-target {
-        width: 100%;
-        /* Ensures responsiveness */
-        transition: transform 0.3s ease-in-out;
-        /* Smooth zoom effect */
-    }
-
-    .hover-effect-scale:hover .hover-effect-target {
-        transform: scale(1.1);
-        /* Zooms in while maintaining layout */
-    }
-
-
-
-    @media (max-width: 576px) {
-        .news-title {
-            font-size: 1.75rem;
-        }
-
-        .news-headline {
-            font-size: 1.3rem;
-        }
-
-        .news-text {
-            font-size: 0.9rem;
-        }
-    }
-</style>
-
 <body>
-    <!-- <p><strong>Server IP:</strong> <span class="server-ip">quite-calculate.gl.joinmc.link [1.20.1]</span></p> -->
-
-
-    <section class="news-section">
-        <div class="news-container">
-            <h2 class="news-title">Latest News</h2>
-
-            <div class="news-item">
-                <!-- Scale (zoom) image on hover -->
-                <div class="hover-effect-scale" style="max-width: 306px;">
-                    <img src="assets/img/16.3.25 [3].png" class="hover-effect-target" alt="Image">
-                </div>
-
-                <h3 class="news-headline">Server Update: New Season Begins</h3>
-                <p class="news-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula erat vel tellus
-                    fermentum, a bibendum dui placerat.
-                </p>
-                <span class="news-date">March 29, 2025</span>
+    <!-- Toast Container -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div id="serverStatusToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Server Status</strong>
+                <small class="text-muted">Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-
-            <div class="news-item">
-                <h3 class="news-headline">Event: Battle for Dominance</h3>
-                <p class="news-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed libero a magna bibendum
-                    sodales sit amet vel nunc.
-                </p>
-                <span class="news-date">March 25, 2025</span>
-            </div>
-
-            <div class="news-item">
-                <h3 class="news-headline">New Features Released</h3>
-                <p class="news-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac justo urna. Pellentesque interdum,
-                    sapien at pulvinar commodo.
-                </p>
-                <span class="news-date">March 20, 2025</span>
+            <div class="toast-body" id="toastBody">
+                <!-- Status message will be injected here -->
             </div>
         </div>
-    </section>
+    </div>
 
-
-
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        async function testFetchSpeed(url) {
-            console.time("fetchTime");
-            try {
-                const response = await fetch(url);
-                await response.json();
-                console.timeEnd("fetchTime");
-            } catch (error) {
-                console.error("Error during fetch:", error);
-                console.timeEnd("fetchTime");
+        document.addEventListener("DOMContentLoaded", () => {
+            const serverIP = "quite-calculate.gl.joinmc.link";
+            const toastElement = document.getElementById("serverStatusToast");
+            const toastBody = document.getElementById("toastBody");
+            const toast = new bootstrap.Toast(toastElement);
+            let previousStatus = null;
+
+            async function checkServerStatus() {
+                try {
+                    const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
+                    const data = await response.json();
+                    const currentStatus = data.online ? "Online" : "Offline";
+
+                    if (previousStatus !== null && currentStatus !== previousStatus) {
+                        toastBody.textContent = `Server is now ${currentStatus}`;
+                        toast.show();
+                    }
+
+                    previousStatus = currentStatus;
+                } catch (error) {
+                    console.error("Failed to fetch server status:", error);
+                }
             }
-        }
 
-        testFetchSpeed("https://api.mcsrvstat.us/2/quite-calculate.gl.joinmc.link");
-
+            setInterval(checkServerStatus, 10000);
+            checkServerStatus();
+        });
     </script>
 </body>
 
