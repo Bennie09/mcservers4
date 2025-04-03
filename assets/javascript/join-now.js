@@ -2,15 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const joinButton = document.querySelector(".join-btn");
   const overlay = document.querySelector(".join-overlay");
   const closeButton = document.querySelector(".close");
+  const ipInfo = document.querySelector(".ip-info");
 
   overlay.style.display = "none";
 
   joinButton.addEventListener("click", () => {
     overlay.style.display = "flex";
-  });
-
-  overlay.addEventListener("click", () => {
-    overlay.style.display = "none";
   });
 
   closeButton.addEventListener("click", () => {
