@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.style.display = "flex";
   });
 
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+
   closeButton.addEventListener("click", () => {
     overlay.style.display = "none";
   });
